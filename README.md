@@ -8,11 +8,11 @@ Installation:
 
 See this blog post for additional details.
 
-- Download and install [VirtualBox](http://www.virtualbox.org/).
+Download and install [VirtualBox](http://www.virtualbox.org/).
 
-- Download and install [vagrant](http://vagrantup.com/).
+Download and install [Vagrant](http://vagrantup.com/).
 
-- Download the 'trusty32' (Ubuntu 14.04 32-bit) Vagrant box.
+Download the 'trusty32' (Ubuntu 14.04 32-bit) Vagrant box.
 
     $ vagrant box add ubuntu/trusty32
 
@@ -32,24 +32,13 @@ Installed software:
 
 * Apache
 * MySQL
-* php
+* PHP
 * phpMyAdmin
-* Xdebug with Webgrind
-* zsh with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+* Xdebug (Uses default port of 9000.)
 * git, subversion
 * mc, vim, screen, tmux, curl
 * [MailCatcher](http://mailcatcher.me/)
 * [Composer](http://getcomposer.org/)
-* Phing
-* Drupal utils:
-    * [Drush](http://drupal.org/project/drush)
-* Wordpress utils:
-    * [WP-Cli](http://wp-cli.org/)
-    * [wp2github.py](http://github.com/r8/wp2github.py)
-* Magento utils:
-    * [n98-magerun](https://github.com/netz98/n98-magerun)
-    * [modman](https://github.com/colinmollenhour/modman)
-    * [modgit](https://github.com/jreinke/modgit)
 * Node.js with following packages:
     * [CoffeeScript](http://coffeescript.org)
     * [Grunt](http://gruntjs.com/)
@@ -117,3 +106,8 @@ All emails sent by PHP are intercepted by MailCatcher. So normally no email woul
 ### Composer
 
 Composer binary is installed globally (to `/usr/local/bin`), so you can simply call `composer` from any directory.
+
+References
+----------
+[How to Create and Share a Vagrant Base Box](http://www.sitepoint.com/create-share-vagrant-base-box/)
+[ubuntu/trusty32 Vagrant Box](https://vagrantcloud.com/ubuntu/boxes/trusty32)

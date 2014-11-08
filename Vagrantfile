@@ -7,11 +7,8 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "precise32"
-
-  # The url from where the 'config.vm.box' box will be fetched if it
-  # doesn't already exist on the user's system.
-  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+  # We use standard Vagrant Cloud box, so box URL is *NOT* required.
+  config.vm.box = "ubuntu/trusty32"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine.
@@ -30,8 +27,9 @@ Vagrant.configure("2") do |config|
   # Provider-specific configuration so you can fine-tune VirtualBox for Vagrant.
   # These expose provider-specific options.
   config.vm.provider :virtualbox do |vb|
+    # Installation of Laravel framework requires minimum of 1024MB of memory.
     # Use VBoxManage to customize the VM. For example to change memory:
-    vb.customize ["modifyvm", :id, "--memory", "512"]
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
@@ -43,9 +41,10 @@ Vagrant.configure("2") do |config|
 
     # List of recipes to run
     chef.add_recipe "vagrant_main"
-    chef.add_recipe "vagrant_main::wordpress"
-    chef.add_recipe "vagrant_main::drupal"
-    chef.add_recipe "vagrant_main::magento"
-    chef.add_recipe "vagrant_main::nodejs"
+    chef.add_recipe "vagrant_laravel"
+    #chef.add_recipe "vagrant_main::wordpress"
+    #chef.add_recipe "vagrant_main::drupal"
+    #chef.add_recipe "vagrant_main::magento"
+    #chef.add_recipe "vagrant_main::nodejs"
   end
 end
