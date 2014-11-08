@@ -1,22 +1,26 @@
-Vagrant LAMP
+My Homestead
 ============
 
-My default LAMP development stack configuration for Vagrant.
+Alternative to [Laravel](http://www.laravel.com/) framework [Homestead](http://laravel.com/docs/homestead) development environment based on [Vagrant LAMP](https://github.com/r8/vagrant-lamp).
 
 Installation:
 -------------
 
-Download and install [VirtualBox](http://www.virtualbox.org/)
+See this blog post for additional details.
 
-Download and install [vagrant](http://vagrantup.com/)
+- Download and install [VirtualBox](http://www.virtualbox.org/).
 
-Download a vagrant box (name of the box is supposed to be precise32)
+- Download and install [vagrant](http://vagrantup.com/).
 
-    $ vagrant box add precise32 http://files.vagrantup.com/precise32.box
+- Download the 'trusty32' (Ubuntu 14.04 32-bit) Vagrant box.
 
-Clone this repository
+    $ vagrant box add ubuntu/trusty32
 
-Go to the repository folder and launch the box
+Clone this repository.
+
+    $ git clone http://github.com/timothydjones/myhomestead
+
+Go to the repository folder and launch the box.
 
     $ cd [repo]
     $ vagrant up
